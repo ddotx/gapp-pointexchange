@@ -21,7 +21,11 @@
               "apps/point-exchange/src/favicon.ico",
               "apps/point-exchange/src/assets"
             ],
-            "styles": ["apps/point-exchange/src/styles.css"],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "apps/point-exchange/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -80,7 +84,10 @@
               "apps/point-exchange/tsconfig.app.json",
               "apps/point-exchange/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/point-exchange/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/point-exchange/**"
+            ]
           }
         },
         "test": {
@@ -88,7 +95,11 @@
           "options": {
             "jestConfig": "apps/point-exchange/jest.config.js",
             "tsConfig": "apps/point-exchange/tsconfig.spec.json",
-            "setupFile": "apps/point-exchange/src/test-setup.ts"
+            "setupFile": "apps/point-exchange/src/test-setup.ts",
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+            ]
           }
         }
       }
@@ -114,8 +125,41 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/point-exchange-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/point-exchange-e2e/**"]
+            "tsConfig": [
+              "apps/point-exchange-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/point-exchange-e2e/**"
+            ]
+          }
+        }
+      }
+    },
+    "ui-ngx": {
+      "root": "libs/ui-ngx",
+      "sourceRoot": "libs/ui-ngx/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-ngx/tsconfig.lib.json",
+              "libs/ui-ngx/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-ngx/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ui-ngx/jest.config.js",
+            "tsConfig": "libs/ui-ngx/tsconfig.spec.json"
           }
         }
       }
