@@ -7,10 +7,23 @@ import { CardDetailComponent } from './card/card-detail/card-detail.component';
 import { CardListComponent } from './card/card-list/card-list.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, CardCreateComponent, CardDetailComponent, CardListComponent],
-  imports: [BrowserModule, CoreModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    CardCreateComponent,
+    CardDetailComponent,
+    CardListComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    CoreModule,
+    BrowserAnimationsModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
