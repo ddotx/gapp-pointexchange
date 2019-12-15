@@ -11,6 +11,10 @@ const routes: Routes = [
     import('./exchange/exchange.module')
     .then(m => m.ExchangeModule)
   },
+  { path: 'card', loadChildren: () =>
+    import('./card/card.module')
+    .then(m => m.CardModule)
+  },
   { path: '', pathMatch: 'full', redirectTo: 'home'},
 ]
 
