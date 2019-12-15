@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'gapp-card-create',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
+
+  onBack(){
+    this.route.navigate(['/card'])
+  }
 
   ngOnInit() {
   }
