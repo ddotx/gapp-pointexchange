@@ -11,9 +11,13 @@ const routes: Routes = [
     import('./exchange/exchange.module')
     .then(m => m.ExchangeModule)
   },
-  { path: 'card', loadChildren: () =>
-    import('./card/card.module')
-    .then(m => m.CardModule)
+  { path: 'cards', loadChildren: () =>
+    import('./cards/cards.module')
+    .then(m => m.CardsModule)
+  },
+  { path: 'profile', loadChildren: () =>
+    import('./profile/profile.module')
+    .then(m => m.ProfileModule)
   },
   { path: '', pathMatch: 'full', redirectTo: 'home'},
 ]

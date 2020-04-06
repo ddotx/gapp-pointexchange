@@ -7,6 +7,7 @@ import { CardCreateComponent } from './card-create/card-create.component';
 import { CardDetailComponent } from './card-detail/card-detail.component';
 import { CardComponent } from './card.component';
 import { CardHomeComponent } from './card-home/card-home.component';
+import { CardIntroComponent } from './card-intro/card-intro.component';
 
 
 
@@ -16,7 +17,7 @@ import { CardHomeComponent } from './card-home/card-home.component';
     CardCreateComponent,
     CardDetailComponent,
     CardComponent,
-    CardHomeComponent,
+    CardIntroComponent,
   ],
   imports: [
     CommonModule,
